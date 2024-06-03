@@ -1,1 +1,18 @@
 <h1>Home Page</h1>
+
+{{#if usuarios}}
+<table border="1">
+    <tr>
+        <th>nome</th>
+        <th>endereço</th>
+    </tr>
+    {{#each usuarios}}
+      <tr>
+        <td>{{this.nome}}</td>
+        <td>{{this.endereco}}</td>
+      </tr>
+      {{/each}}
+</table>
+{{else}}
+<p>Não há usuários cadastrados!</p>
+{{/if}}
